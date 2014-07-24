@@ -1,17 +1,4 @@
-// DIOSES
 
-moduloMitologia.controller("controllerMain", function ($scope){
-	$scope.saludoInicial = 'Selecciona una mitología';
-});
-moduloMitologia.controller("controllerGrecia", function ($scope){
-	$scope.dioses = [ {nombre: 'Zeus'}, {nombre: 'Afrodita'}, {nombre: 'Atenea'} ];
-});
-moduloMitologia.controller("controllerEscandinavia", function ($scope){
-	$scope.dioses = [ {nombre: 'Odin'}, {nombre: 'Thor'}, {nombre: 'Loki'} ];
-});
-moduloMitologia.controller("controllerMesoamerica", function ($scope){
-	$scope.dioses = [ {nombre: 'Quetzalcoatl'}, {nombre: 'Tezcatlipoca'}, {nombre: 'Tlaloc'} ];
-});
 
 //LIGA
 moduloLiga.controller('playersController', function($scope, factoryPlayer) {
@@ -87,4 +74,14 @@ moduloLiga.controller("playerAcciones", function($scope, factoryPlayer) {
         /* y reseteamos el formulario */
         $scope.formPlayer = {};
     }
+});
+
+moduloLiga.controller('ModalDemoCtrl', function($scope, $modal) {
+    $scope.items = ['item1', 'item2', 'item3'];
+
+      $scope.reallyDelete = function(item) {
+        $scope.items = window._.remove($scope.items, function(elem) {
+          return elem != item;
+        });
+      };
 });

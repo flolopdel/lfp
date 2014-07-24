@@ -13,7 +13,7 @@
 			<tbody>
 				<tr ng-cloack ng-repeat="player in playersList">
 					<form novalidate class="simple-form">
-						<td><a href="#" ng-click="deletePlayer(player)">Delete</a></div>{{$index + 1}}</td>
+						<td>{{$index + 1}}</td>
 						<td>
 							<!-- <img src="img/flags/{{driver.Driver.nationality}}.png" /> -->
 							<a href="#/player/{{player.name}}">
@@ -22,9 +22,10 @@
 						</td>
 						<td>{{player.partidosJ}}</td>
 						<td>{{player.points}}</td>
-						<td><button class="btn btn-sm btn-success" ng-click="update(player,3)">Gana</button>
-							<button class="btn btn-sm btn-warning" ng-click="update(player,1)">Empata</button>
-							<button class="btn btn-sm btn-danger" ng-click="update(player,0)">Pierde</button>
+						<td><button class="btn btn-xs btn-success" ng-click="update(player,3)">Gana</button>
+							<button class="btn btn-xs btn-warning" ng-click="update(player,1)">Empata</button>
+							<button class="btn btn-xs btn-danger" ng-click="update(player,0)">Pierde</button> | 
+							<a href="#" ng-click="deletePlayer(player)" class=" glyphicon glyphicon-trash btn btn-xs btn-danger remove_fields"></a>
 						</td>
 					</form>
 				</tr>
