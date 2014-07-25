@@ -1,10 +1,11 @@
 
 //LIGA
-var moduloLiga = angular.module('appLiga', ['ngRoute']);
+var moduloLiga = angular.module('appLiga', ['ngRoute','moduloDialog','ui.bootstrap','dialogs.main','dialogs.default-translations','pascalprecht.translate']);
 moduloLiga.config(function($routeProvider) {
 	$routeProvider
 	.when("/", {
-		templateUrl : "templates/liga/main.html"
+		templateUrl : "templates/liga/main.html",
+    controller : "dialogServiceTest"
 	})
 	.otherwise({ reditrectTo : "/" });
 });

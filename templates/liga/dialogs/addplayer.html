@@ -1,0 +1,16 @@
+<section id="modalNota" ng-show="getShowPlayer()">		
+    <article id="modalNotaDesarrollo">
+        <header class="titularModales"><span class="notaCerrar" ng-click="addPlayer()">x</span>Añadir Jugador</header>
+        <!-- form https://docs.angularjs.org/guide/forms -->
+        <form name="formPlayer" ng-submit="submitAddPlayer()">
+            <p><label for="name">Nombre</label><br />
+                <!-- Obsérvese la directiva ng-model en los inputs, que es la que "recogemos" en el controller -->
+                <input type="text" name="name" id="name" ng-model="formPlayer.inputName" /></p>
+            <p><label for="nationality">Nacionalidad</label><br />
+                <textarea  name="nationality" id="nationality" ng-model="formPlayer.inputNationality"></textarea></p>
+            <p><label for="team">Equipo</label><br />
+                <input type="text" name="team" id="team" ng-model="formPlayer.inpuTeam" /></p>
+            <p><button>Añadir jugador</button></p>
+        </form>
+    </article>        
+</section>
